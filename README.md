@@ -8,6 +8,12 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 
 [![GoDoc](https://godoc.org/github.com/reiver/go-fssup?status.svg)](https://godoc.org/github.com/reiver/go-fssup)
 
+## Usage
+
+```golang
+newfsys, err := fssup.Sup(fsys, dir)
+```
+
 ## Explanation
 
 The Go built-in `fs` package has the `fs.Sub` function that takes a `fs.FS` and returns a new `fs.FS` that removes a path prefix.
@@ -21,8 +27,8 @@ For example, if the original `fs.FS` only has the following files:
 * `www/apple/banana/cherry.ogv`
 
 Then calling:
-```
-newfs, err := fs.Sub(fsys, "www")
+```golang
+newfsys, err := fs.Sub(fsys, "www")
 ```
 
 ... would give effectively give you a new `fs.FS` has the same files, but where the `"www/"` path prefix has been removed:
@@ -61,8 +67,8 @@ But want them to have the path prefix `"science/chemistry"`; i.e.,:
 * `science/chemistry/molecule.html`
 
 Then you could accomplish that with:
-```
-newfs, err := fssup.Sup(fsys, "science/chemistry")
+```golang
+newfsys, err := fssup.Sup(fsys, "science/chemistry")
 ```
 
 ## Import
