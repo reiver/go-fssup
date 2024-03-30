@@ -38,7 +38,7 @@ What if you want to add a path prefix?
 
 That is what this package provides.
 
-If, for example, you have the following files:
+If, for example, your `fs.FS` havs the following files:
 
 * `avogadro-number.html`
 * `element.htmll`
