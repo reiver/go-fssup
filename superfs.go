@@ -4,12 +4,12 @@ import (
 	"io/fs"
 )
 
-type supFS struct {
+type superFS struct {
 	fsys fs.FS
 	dir string
 }
 
-func (receiver supFS) Open(name string) (fs.File, error) {
+func (receiver superFS) Open(name string) (fs.File, error) {
 	var fsys fs.FS = receiver.fsys
 	if nil == fsys {
 		return nil, errNilFieSystem

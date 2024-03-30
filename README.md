@@ -1,6 +1,6 @@
 # go-fssup
 
-Package **fssup** provides the `Sup` function (which is the inverse to `fs.Sub` and is missing from the Go built-in `fs` package), for the Go programming language.
+Package **fssup** provides the `Super` function (which is the inverse to `fs.Sub` and is missing from the Go built-in `fs` package), for the Go programming language.
 
 ## Documention
 
@@ -11,7 +11,7 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 ## Usage
 
 ```golang
-newfsys, err := fssup.Sup(fsys, dir)
+newfsys, err := fssup.Super(fsys, dir)
 ```
 
 ## Explanation
@@ -68,7 +68,7 @@ But want them to have the path prefix `"science/chemistry"`; i.e.,:
 
 Then you could accomplish that with:
 ```golang
-newfsys, err := fssup.Sup(fsys, "science/chemistry")
+newfsys, err := fssup.Super(fsys, "science/chemistry")
 ```
 
 ## Import
